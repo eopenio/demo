@@ -1,0 +1,57 @@
+version = "v1.0"
+sgid = 100086    # service group id
+siid = 10008601  # service instance id
+service = "demo.srv"
+
+[log]
+# Log level: debug, info, warn, error, fatal.
+level = "info"
+
+# Log format, one of json, text, console.
+format = "text"
+
+# Enable automatic timestamps in log output, if not set, it will be defaulted to true.
+# enable-timestamp = true
+
+# Enable annotating logs with the full stack error message, if not set, it will be defaulted to false.
+# enable-error-stack = false
+
+# File logging.
+[log.file]
+# Log file name.
+filename = "logs/srv.log"
+
+# Max log file size in MB (upper limit to 4096MB).
+max-size = 300
+
+# Max log file keep days. No clean up by default.
+max-days = 14
+
+# Maximum number of old log files to retain. No clean up by default.
+max-backups = 14
+
+[security]
+# Path of file that contains list of trusted SSL CAs for connection with mysql client.
+ssl-ca = ""
+
+# Path of file that contains X509 certificate in PEM format for connection with mysql client.
+ssl-cert = ""
+
+# Path of file that contains X509 key in PEM format for connection with mysql client.
+ssl-key = ""
+
+# Path of file that contains list of trusted SSL CAs for connection with cluster components.
+cluster-ssl-ca = ""
+
+# Path of file that contains X509 certificate in PEM format for connection with cluster components.
+cluster-ssl-cert = ""
+
+# Path of file that contains X509 key in PEM format for connection with cluster components.
+cluster-ssl-key = ""
+
+[status]
+# If enable status report HTTP service.
+report-status = true
+
+# TiDB status host.
+status-host = "0.0.0.0"
