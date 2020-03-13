@@ -2,19 +2,20 @@ package subscriber
 
 import (
 	"context"
-	"github.com/micro/go-micro/util/log"
+	"github.com/eopenio/util/logutil"
+	"go.uber.org/zap"
 
-	template "github.com/eopenio/examples/template/srv/proto/template"
+	template "github.com/eopenio/demo/template/srv/proto/template"
 )
 
 type Template struct{}
 
 func (e *Template) Handle(ctx context.Context, msg *template.Message) error {
-	log.Log("Handler Received message: ", msg.Say)
+	logutil.BgLogger().Info("Handler Received message: ", zap.String("msg.Say", msg.Say))
 	return nil
 }
 
 func Handler(ctx context.Context, msg *template.Message) error {
-	log.Log("Function Received message: ", msg.Say)
+	logutil.BgLogger().Info("Function Received message: ", zap.String("msg.Say", msg.Say))
 	return nil
 }

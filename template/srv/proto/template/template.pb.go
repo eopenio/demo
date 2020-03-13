@@ -303,7 +303,9 @@ func init() {
 	proto.RegisterType((*Pong)(nil), "eopenio.micro.srv.template.Pong")
 }
 
-func init() { proto.RegisterFile("proto/template/template.proto", fileDescriptor_8f24d5d346a033e9) }
+func init() {
+	proto.RegisterFile("proto/template/template.proto", fileDescriptor_8f24d5d346a033e9)
+}
 
 var fileDescriptor_8f24d5d346a033e9 = []byte{
 	// 278 bytes of a gzipped FileDescriptorProto

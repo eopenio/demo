@@ -8,13 +8,13 @@ service = "demo.srv"
 level = "info"
 
 # Log format, one of json, text, console.
-format = "text"
+format = "json"
 
 # Enable automatic timestamps in log output, if not set, it will be defaulted to true.
-# enable-timestamp = true
+enable-timestamp = true
 
 # Enable annotating logs with the full stack error message, if not set, it will be defaulted to false.
-# enable-error-stack = false
+enable-error-stack = true
 
 # File logging.
 [log.file]

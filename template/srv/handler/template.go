@@ -6,15 +6,15 @@ import (
 
 	"github.com/eopenio/util/logutil"
 
-	template "github.com/eopenio/examples/template/srv/proto/template"
+	template "github.com/eopenio/demo/template/srv/proto/template"
 )
 
 type Template struct{}
 
 // Call is a single request handler called via client.Call or the generated client code
 func (e *Template) Call(ctx context.Context, req *template.Request, rsp *template.Response) error {
-	logutil.BgLogger().Info("Received Template.Call request")
 	rsp.Msg = "Hello " + req.Name
+	logutil.BgLogger().Info("Received Template.Call request", zap.String("rsp.Msg", rsp.Msg))
 	return nil
 }
 
